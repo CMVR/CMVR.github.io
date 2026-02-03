@@ -1,0 +1,113 @@
+/* ================================
+   Papers Page Styles
+   ================================ */
+
+.papers-list {
+    max-width: 800px;
+}
+
+.paper-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.paper-item:first-child {
+    padding-top: 0;
+}
+
+.paper-year {
+    flex-shrink: 0;
+    width: 60px;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-accent);
+}
+
+.paper-content {
+    flex: 1;
+}
+
+.paper-content h2 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.paper-authors {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.25rem;
+}
+
+.paper-journal {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.paper-links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.paper-link {
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    font-weight: 500;
+    transition: opacity var(--transition-fast);
+}
+
+.paper-link:hover {
+    opacity: 0.7;
+}
+
+.paper-citations {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    padding: 0.25rem 0.5rem;
+    background: var(--color-accent-soft);
+    border-radius: 4px;
+}
+
+.scholar-link {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
+}
+
+.scholar-link p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+}
+
+.scholar-link a {
+    color: var(--color-accent);
+    font-weight: 500;
+    transition: opacity var(--transition-fast);
+}
+
+.scholar-link a:hover {
+    opacity: 0.7;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 600px) {
+    .paper-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .paper-year {
+        width: auto;
+    }
+}

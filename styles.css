@@ -331,6 +331,102 @@ img {
 }
 
 /* ================================
+   Page Headers
+   ================================ */
+.page-header {
+    max-width: var(--content-max-width);
+    margin-bottom: var(--spacing-lg);
+    animation: fadeInUp 0.6s ease both;
+}
+
+.page-header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-intro {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    max-width: 650px;
+    line-height: 1.7;
+}
+
+/* ================================
+   Projects List (Overview Pages)
+   ================================ */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: var(--content-max-width);
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.project-card-large {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--spacing-md);
+    background: var(--color-sidebar);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-smooth);
+}
+
+.project-card-large:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px var(--color-shadow);
+    border-color: transparent;
+}
+
+.project-card-large .project-image {
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition-smooth);
+}
+
+.project-card-large:hover .project-image {
+    transform: scale(1.02);
+}
+
+.project-card-large .project-info {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-card-large .project-info h2 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.project-meta-tag {
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.project-card-large .project-info p:last-child {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* ================================
    Responsive
    ================================ */
 @media (max-width: 900px) {
@@ -340,6 +436,14 @@ img {
     
     .content {
         padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
+    .project-card-large {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card-large .project-image {
+        aspect-ratio: 16 / 9;
     }
 }
 

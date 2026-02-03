@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project One | Connor McCabe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">CM</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="papers.html">Papers</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="https://youtube.com/@CMVR" target="_blank" class="social-link">YouTube</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <article class="project-page">
+            <header class="project-header">
+                <a href="projects.html" class="back-link">← Back to Projects</a>
+                <h1>Project One</h1>
+                <p class="project-subtitle">A brief tagline describing what this project explores in VR</p>
+                <div class="project-meta">
+                    <span class="meta-item">2024</span>
+                    <span class="meta-divider">·</span>
+                    <span class="meta-item">Unity / C#</span>
+                    <span class="meta-divider">·</span>
+                    <span class="meta-item">Meta Quest 3</span>
+                </div>
+            </header>
+
+            <section class="project-intro">
+                <p>This is where you'd write a compelling introduction to the project. Explain the motivation behind it, the problem it addresses, and why it matters. Keep it conversational but professional.</p>
+                <p>You can have multiple paragraphs here to give visitors a good understanding of the project before they dive into the visuals.</p>
+            </section>
+
+            <!-- Video Section -->
+            <section class="project-video">
+                <div class="video-container">
+                    <!-- Replace with your actual YouTube embed -->
+                    <div class="video-placeholder">
+                        <span>YouTube Video Embed</span>
+                        <p>Replace this with your iframe embed code</p>
+                    </div>
+                    <!-- Example embed format:
+                    <iframe 
+                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                        title="Project Video"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    -->
+                </div>
+            </section>
+
+            <!-- Image Gallery -->
+            <section class="project-gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="0">
+                        <div class="gallery-image" style="background: linear-gradient(135deg, #e8f4f8 0%, #c9e4eb 100%);">
+                            <span class="placeholder-text">Image 1</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="1">
+                        <div class="gallery-image" style="background: linear-gradient(135deg, #f4f1e8 0%, #e5dfd0 100%);">
+                            <span class="placeholder-text">Image 2</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="2">
+                        <div class="gallery-image" style="background: linear-gradient(135deg, #f0e8f4 0%, #e0d4eb 100%);">
+                            <span class="placeholder-text">Image 3</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="3">
+                        <div class="gallery-image" style="background: linear-gradient(135deg, #e8f4eb 0%, #d0ebda 100%);">
+                            <span class="placeholder-text">Image 4</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="4">
+                        <div class="gallery-image" style="background: linear-gradient(135deg, #f4ece8 0%, #ebddd4 100%);">
+                            <span class="placeholder-text">Image 5</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-index="5">
+                        <div class="gallery-image" style="background: linear-gradient(135deg, #e8eef4 0%, #d4e0eb 100%);">
+                            <span class="placeholder-text">Image 6</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Details -->
+            <section class="project-details">
+                <h2>Technical Details</h2>
+                <p>Here you can go deeper into the technical implementation. Discuss the tools, frameworks, and techniques you used. This is where fellow researchers and developers will find value.</p>
+                <p>You might cover challenges you faced, how you solved them, and what you learned in the process.</p>
+            </section>
+
+            <!-- Project Navigation -->
+            <nav class="project-nav">
+                <a href="projects.html" class="nav-prev">
+                    <span class="nav-label">All Projects</span>
+                </a>
+                <a href="project-2.html" class="nav-next">
+                    <span class="nav-label">Next Project</span>
+                    <span class="nav-title">Project Two →</span>
+                </a>
+            </nav>
+        </article>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">×</button>
+        <button class="lightbox-prev" aria-label="Previous image">‹</button>
+        <button class="lightbox-next" aria-label="Next image">›</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image-container">
+                <!-- Image will be inserted here -->
+            </div>
+            <div class="lightbox-counter">
+                <span class="current">1</span> / <span class="total">6</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="lightbox.js"></script>
+</body>
+</html>

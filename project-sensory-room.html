@@ -32,7 +32,7 @@
             <header class="project-header">
                 <a href="projects.html" class="back-link">← Back to Projects</a>
                 <h1>Co-designing A Customisable VR Sensory Room with Autistic Adults</h1>
-                <p class="project-subtitle">Participatory research developing personalised virtual sensory environments</p>
+                <p class="project-subtitle">Iterative prototyping and participatory research developing personalised virtual sensory environments</p>
                 <div class="project-meta">
                     <span class="meta-item">PCVR</span>
                     <span class="meta-divider">·</span>
@@ -43,43 +43,112 @@
             </header>
 
             <section class="project-intro">
-                <p>This project explores the co-design of customisable virtual reality sensory rooms with autistic adults. Working directly with participants, I developed a VR environment that allows users to personalise sensory elements to create calming, comfortable spaces tailored to their individual preferences.</p>
+                <p>This project explores the co-design of customisable virtual reality sensory rooms with autistic adults. Working directly with participants through iterative design cycles, I developed a VR environment that allows users to personalise sensory elements to create calming, comfortable spaces tailored to their individual preferences.</p>
                 <p>The research investigates how VR can provide autistic individuals with a portable, accessible solution for sensory regulation, while the co-design approach ensures the technology genuinely meets user needs.</p>
             </section>
 
-            <!-- Image Gallery -->
+            <!-- Initial Design -->
+            <section class="project-details">
+                <h2>Initial Design</h2>
+                <p>The project began by prototyping different styles of "rooms" and creating a basic wireframe for the UI. I opted to start with a very basic room as it made implementing customisation less challenging and would provide participants with more of a blank slate to build upon.</p>
+            </section>
+
             <section class="project-gallery">
-                <h2>Gallery</h2>
+                <h3>Room Prototypes</h3>
                 <div class="gallery-grid">
                     <div class="gallery-item" data-index="0">
-                        <img src="images/sensory-overview.png" alt="Overview of the VR sensory environment landscape" class="gallery-image">
+                        <img src="images/sensory-room/room-basic-exterior.png" alt="Basic room exterior - simple blue box design" class="gallery-image">
                     </div>
                     <div class="gallery-item" data-index="1">
-                        <img src="images/sensory-forest.png" alt="Forest path environment in the VR sensory room" class="gallery-image">
+                        <img src="images/sensory-room/room-skylights.png" alt="Room with skylights added" class="gallery-image">
                     </div>
                     <div class="gallery-item" data-index="2">
-                        <img src="images/sensory-options.png" alt="Environment customisation settings menu" class="gallery-image">
+                        <img src="images/sensory-room/room-windows.png" alt="Room with windows" class="gallery-image">
                     </div>
                 </div>
             </section>
 
-            <!-- Features -->
+            <!-- Version 1 -->
             <section class="project-details">
-                <h2>Key Features</h2>
-                <p>The VR sensory room includes extensive customisation options developed through iterative co-design sessions with autistic adults:</p>
+                <h2>Version 1 - Features</h2>
+                <p>The first version included a "forest" environment with waterfall, a basic UI that allowed spawning of items and customising the room. Key features included:</p>
                 <ul class="feature-list">
-                    <li><strong>Lighting Settings</strong> — Adjustable brightness, colour temperature, and ambient lighting</li>
-                    <li><strong>Room Colours</strong> — Customisable colour schemes to suit individual preferences</li>
-                    <li><strong>Room Features</strong> — Toggleable environmental elements and objects</li>
-                    <li><strong>Passthrough Settings</strong> — Mixed reality options for grounding</li>
-                    <li><strong>Outside Settings</strong> — Natural environments including forests and water features</li>
+                    <li><strong>Forest Environment</strong> — Natural landscape with waterfall and trees</li>
+                    <li><strong>Basic UI</strong> — Menu system for spawning items and customising the room</li>
+                    <li><strong>Pass-through</strong> — Ability to see the physical environment without removing the headset</li>
+                    <li><strong>Interactive Objects</strong> — Ball gun, paintbrush, and bowling pins</li>
                 </ul>
+            </section>
+
+            <section class="project-gallery">
+                <h3>Version 1 Environment</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="3">
+                        <img src="images/sensory-room/v1-forest-overview.png" alt="Version 1 forest environment overview" class="gallery-image">
+                    </div>
+                    <div class="gallery-item" data-index="4">
+                        <img src="images/sensory-room/v1-landscape-aerial.png" alt="Version 1 aerial landscape view" class="gallery-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Objects -->
+            <section class="project-details">
+                <h2>Interactive Objects</h2>
+                <p>These items were chosen as they afforded the ability to prototype object interactions across a range of different interaction types — items that could be held, items that could be placed, and items that afforded customisation.</p>
+            </section>
+
+            <section class="project-gallery">
+                <h3>3D Models</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="5">
+                        <img src="images/sensory-room/ball-gun-rendered.png" alt="Ball gun - rendered view" class="gallery-image">
+                    </div>
+                    <div class="gallery-item" data-index="6">
+                        <img src="images/sensory-room/ball-gun-wireframe.png" alt="Ball gun - wireframe view" class="gallery-image">
+                    </div>
+                    <div class="gallery-item" data-index="7">
+                        <img src="images/sensory-room/paintbrush.png" alt="Paintbrush tool" class="gallery-image">
+                    </div>
+                    <div class="gallery-item" data-index="8">
+                        <img src="images/sensory-room/bowling-pins.png" alt="Bowling pins with placement UI" class="gallery-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Version 2 -->
+            <section class="project-details">
+                <h2>Version 2 - Improvements</h2>
+                <p>Based on participant feedback, Version 2 included significant improvements:</p>
+                <ul class="feature-list">
+                    <li><strong>Improved Menu</strong> — Ability to open the menu anywhere by pressing "A", always opens in front of the user</li>
+                    <li><strong>Expanded Object Library</strong> — More items available to spawn and interact with</li>
+                    <li><strong>Easier Controls</strong> — Sliders and drop-downs made easier to use</li>
+                    <li><strong>Redesigned Paintbrush</strong> — Now comes with a palette, change colour by dipping it in paint</li>
+                    <li><strong>Enhanced Ball Gun</strong> — Can fire different colours, bouncy balls, and swap between semi and fully automatic</li>
+                </ul>
+            </section>
+
+            <section class="project-gallery">
+                <h3>Version 2 Environment</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="9">
+                        <img src="images/sensory-room/v2-landscape-aerial.png" alt="Version 2 improved landscape" class="gallery-image">
+                    </div>
+                    <div class="gallery-item" data-index="10">
+                        <img src="images/sensory-room/v2-forest-bench.png" alt="Version 2 forest with bench" class="gallery-image">
+                    </div>
+                    <div class="gallery-item" data-index="11">
+                        <img src="images/sensory-room/v2-forest-path.png" alt="Version 2 forest path" class="gallery-image">
+                    </div>
+                </div>
             </section>
 
             <!-- Technical Details -->
             <section class="project-details">
                 <h2>Technical Details</h2>
                 <p>Built in Unity using C#, the prototype was developed for PCVR platforms to leverage high-fidelity graphics during the co-design research phase. The environment features procedurally generated natural landscapes, dynamic lighting systems, and an intuitive menu system for real-time customisation.</p>
+                <p>A key technical challenge was creating a system that would only access object behaviours when necessary. For example, the ball gun shouldn't fire anytime the trigger is pressed — only when it's being held correctly.</p>
             </section>
 
             <!-- Related Publication -->
@@ -110,7 +179,7 @@
             <div class="lightbox-image-container">
             </div>
             <div class="lightbox-counter">
-                <span class="current">1</span> / <span class="total">3</span>
+                <span class="current">1</span> / <span class="total">12</span>
             </div>
         </div>
     </div>

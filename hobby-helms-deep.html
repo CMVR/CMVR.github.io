@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helm's Deep | Connor McCabe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">CM</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="hobby.html" class="active">Hobby Projects</a></li>
+            <li><a href="papers.html">Papers</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="https://youtube.com/@CMVR" target="_blank" class="social-link">YouTube</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <article class="project-page">
+            <header class="project-header">
+                <a href="hobby.html" class="back-link">← Back to Hobby Projects</a>
+                <h1>Helm's Deep</h1>
+                <p class="project-subtitle">A VR recreation of the iconic Lord of the Rings fortress</p>
+                <div class="project-meta">
+                    <span class="meta-item">Lord of the Rings</span>
+                    <span class="meta-divider">·</span>
+                    <span class="meta-item">VR Environment</span>
+                    <span class="meta-divider">·</span>
+                    <span class="meta-item">Unity</span>
+                </div>
+            </header>
+
+            <section class="project-intro">
+                <p>A personal project recreating the fortress of Helm's Deep from The Lord of the Rings in virtual reality. This environment allows users to explore and experience the scale and atmosphere of one of cinema's most iconic battle locations.</p>
+            </section>
+
+            <!-- Image Gallery - Add your images here -->
+            <section class="project-gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="0">
+                        <div class="gallery-image placeholder-image" style="background: linear-gradient(135deg, #3d4a52 0%, #2a363d 100%);">
+                            <span class="placeholder-text" style="color: rgba(255,255,255,0.5);">Add images</span>
+                        </div>
+                    </div>
+                    <!-- Add more gallery items as needed:
+                    <div class="gallery-item" data-index="1">
+                        <img src="images/helms-deep-2.jpg" alt="Description" class="gallery-image">
+                    </div>
+                    -->
+                </div>
+            </section>
+
+            <section class="project-details">
+                <h2>About This Project</h2>
+                <p>Add details about the project here — what inspired it, how you built it, technical challenges, etc.</p>
+            </section>
+
+            <!-- Project Navigation -->
+            <nav class="project-nav">
+                <a href="hobby.html" class="nav-prev">
+                    <span class="nav-label">All Hobby Projects</span>
+                </a>
+                <a href="hobby-hall-of-kings.html" class="nav-next">
+                    <span class="nav-label">Next Project</span>
+                    <span class="nav-title">Hall of Kings →</span>
+                </a>
+            </nav>
+        </article>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">×</button>
+        <button class="lightbox-prev" aria-label="Previous image">‹</button>
+        <button class="lightbox-next" aria-label="Next image">›</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image-container">
+            </div>
+            <div class="lightbox-counter">
+                <span class="current">1</span> / <span class="total">1</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="lightbox.js"></script>
+</body>
+</html>

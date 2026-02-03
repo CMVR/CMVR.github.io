@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standalone VR Sensory Room | Connor McCabe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">CM</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="hobby.html">Hobby Projects</a></li>
+            <li><a href="papers.html">Papers</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="https://youtube.com/@CMVR" target="_blank" class="social-link">YouTube</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <article class="project-page">
+            <header class="project-header">
+                <a href="projects.html" class="back-link">← Back to Projects</a>
+                <h1>Standalone VR Sensory Room Prototype</h1>
+                <p class="project-subtitle">A portable, wireless implementation for accessible sensory experiences</p>
+                <div class="project-meta">
+                    <span class="meta-item">Meta Quest 3</span>
+                    <span class="meta-divider">·</span>
+                    <span class="meta-item">Standalone Prototype</span>
+                    <span class="meta-divider">·</span>
+                    <span class="meta-item">Unity / C#</span>
+                </div>
+            </header>
+
+            <section class="project-intro">
+                <p>Building on insights from the PCVR co-design research, this project translates the customisable VR sensory room to a standalone platform. The Meta Quest 3 implementation removes the need for expensive PC hardware and cables, making the sensory room truly portable and accessible.</p>
+                <p>This prototype represents a key step toward creating a practical intervention tool that autistic individuals could use in various settings — at home, work, or in public spaces where sensory regulation support is needed.</p>
+            </section>
+
+            <!-- Placeholder for images -->
+            <section class="project-gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="0">
+                        <div class="gallery-image placeholder-image" style="background: linear-gradient(135deg, #e8f4f8 0%, #d4e8ed 100%);">
+                            <span class="placeholder-text">Screenshots coming soon</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Differences -->
+            <section class="project-details">
+                <h2>From PCVR to Standalone</h2>
+                <p>Adapting the sensory room for standalone VR required significant technical optimisation while preserving the features that participants identified as important during co-design:</p>
+                <ul class="feature-list">
+                    <li><strong>Performance Optimisation</strong> — Reduced polygon counts and optimised shaders for mobile GPU</li>
+                    <li><strong>Preserved Customisation</strong> — All key personalisation options retained</li>
+                    <li><strong>Mixed Reality Integration</strong> — Leveraging Quest 3's passthrough for grounding techniques</li>
+                    <li><strong>Portability</strong> — No cables, no PC required — use anywhere</li>
+                </ul>
+            </section>
+
+            <!-- Current Status -->
+            <section class="project-details">
+                <h2>Current Status</h2>
+                <p>The standalone prototype is currently in development, with planned evaluation studies to assess its effectiveness as a portable sensory regulation tool.</p>
+            </section>
+
+            <!-- Project Navigation -->
+            <nav class="project-nav">
+                <a href="project-sensory-room.html" class="nav-prev">
+                    <span class="nav-label">Previous Project</span>
+                    <span class="nav-title">← VR Sensory Room Co-design</span>
+                </a>
+                <a href="project-deescalation.html" class="nav-next">
+                    <span class="nav-label">Next Project</span>
+                    <span class="nav-title">De-escalation Simulator →</span>
+                </a>
+            </nav>
+        </article>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">×</button>
+        <button class="lightbox-prev" aria-label="Previous image">‹</button>
+        <button class="lightbox-next" aria-label="Next image">›</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image-container">
+            </div>
+            <div class="lightbox-counter">
+                <span class="current">1</span> / <span class="total">1</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="lightbox.js"></script>
+</body>
+</html>

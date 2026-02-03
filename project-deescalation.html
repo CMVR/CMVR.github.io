@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR De-escalation Training | Connor McCabe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">CM</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="hobby.html">Hobby Projects</a></li>
+            <li><a href="papers.html">Papers</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="https://youtube.com/@CMVR" target="_blank" class="social-link">YouTube</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <article class="project-page">
+            <header class="project-header">
+                <a href="projects.html" class="back-link">← Back to Projects</a>
+                <h1>VR De-escalation Training Simulator</h1>
+                <p class="project-subtitle">Preparing care professionals for challenging situations through immersive training</p>
+                <div class="project-meta">
+                    <span class="meta-item">Training Simulation</span>
+                    <span class="meta-divider">·</span>
+                    <span class="meta-item">Care Sector</span>
+                    <span class="meta-divider">·</span>
+                    <span class="meta-item">Unity / C#</span>
+                </div>
+            </header>
+
+            <section class="project-intro">
+                <p>This project investigates the application of virtual reality in training and learning within the care sector. The simulator provides care professionals with realistic scenarios to practice de-escalation techniques in a safe, controlled environment.</p>
+                <p>By immersing trainees in challenging situations they may encounter in disability support settings, the VR training tool allows them to develop and refine their response strategies without risk to themselves or the people they support.</p>
+            </section>
+
+            <!-- Image Gallery -->
+            <section class="project-gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="0">
+                        <img src="images/deescalation-home.png" alt="Virtual home environment with participant ID selection" class="gallery-image">
+                    </div>
+                    <div class="gallery-item" data-index="1">
+                        <img src="images/deescalation-dialog.png" alt="Interactive dialog system with response options" class="gallery-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Features -->
+            <section class="project-details">
+                <h2>Key Features</h2>
+                <ul class="feature-list">
+                    <li><strong>Realistic Scenarios</strong> — Virtual environments modelled on real-world care settings</li>
+                    <li><strong>Branching Dialogue</strong> — Multiple response options with different outcomes</li>
+                    <li><strong>Safe Practice Space</strong> — Learn from mistakes without real-world consequences</li>
+                    <li><strong>Participant Tracking</strong> — Individual progress and response logging for research</li>
+                </ul>
+            </section>
+
+            <!-- Technical Details -->
+            <section class="project-details">
+                <h2>How It Works</h2>
+                <p>The simulator places trainees in a realistic home environment where they interact with virtual characters exhibiting behaviours of concern. Trainees must choose appropriate verbal responses and observe how the situation evolves based on their choices.</p>
+                <p>The branching dialogue system allows for multiple pathways through each scenario, demonstrating how different approaches can lead to successful de-escalation or escalation of the situation.</p>
+            </section>
+
+            <!-- Related Publication -->
+            <section class="project-details">
+                <h2>Related Publication</h2>
+                <p>This work is documented in <a href="papers.html">Bridging the Gap: Virtual Reality as a Tool for De-escalation Training in Disability Support Settings</a> (Multimodal Technologies and Interaction, 2024).</p>
+            </section>
+
+            <!-- Project Navigation -->
+            <nav class="project-nav">
+                <a href="project-standalone-sensory.html" class="nav-prev">
+                    <span class="nav-label">Previous Project</span>
+                    <span class="nav-title">← Standalone Sensory Room</span>
+                </a>
+                <a href="projects.html" class="nav-next">
+                    <span class="nav-label">All Projects</span>
+                </a>
+            </nav>
+        </article>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">×</button>
+        <button class="lightbox-prev" aria-label="Previous image">‹</button>
+        <button class="lightbox-next" aria-label="Next image">›</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image-container">
+            </div>
+            <div class="lightbox-counter">
+                <span class="current">1</span> / <span class="total">2</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="lightbox.js"></script>
+</body>
+</html>

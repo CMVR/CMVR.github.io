@@ -32,19 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update lightbox content
     function updateLightboxContent() {
         const item = galleryItems[currentIndex];
-        const imageDiv = item.querySelector('.gallery-image');
         
-        // For demo purposes, we're showing a placeholder
-        // In production, you'd use actual images
-        const bgStyle = imageDiv.style.background;
-        
-        // Check if there's an actual image
-        const img = imageDiv.querySelector('img');
+        // Check for actual image first
+        const img = item.querySelector('img.gallery-image');
         
         if (img) {
             lightboxContent.innerHTML = `<img src="${img.src}" alt="${img.alt || 'Gallery image'}">`;
         } else {
-            // Show placeholder with same gradient
+            // Show placeholder
+            const imageDiv = item.querySelector('.gallery-image');
+            const bgStyle = imageDiv ? imageDiv.style.background : 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)';
             lightboxContent.innerHTML = `
                 <div class="lightbox-placeholder" style="background: ${bgStyle}">
                     <span>Image ${currentIndex + 1}</span>

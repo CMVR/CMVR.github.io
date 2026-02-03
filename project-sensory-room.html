@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Sensory Room Co-design | Connor McCabe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">CM</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="hobby.html">Hobby Projects</a></li>
+            <li><a href="papers.html">Papers</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="https://youtube.com/@CMVR" target="_blank" class="social-link">YouTube</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <article class="project-page">
+            <header class="project-header">
+                <a href="projects.html" class="back-link">← Back to Projects</a>
+                <h1>Co-designing A Customisable VR Sensory Room with Autistic Adults</h1>
+                <p class="project-subtitle">Participatory research developing personalised virtual sensory environments</p>
+                <div class="project-meta">
+                    <span class="meta-item">PCVR</span>
+                    <span class="meta-divider">·</span>
+                    <span class="meta-item">Co-design Research</span>
+                    <span class="meta-divider">·</span>
+                    <span class="meta-item">Unity / C#</span>
+                </div>
+            </header>
+
+            <section class="project-intro">
+                <p>This project explores the co-design of customisable virtual reality sensory rooms with autistic adults. Working directly with participants, I developed a VR environment that allows users to personalise sensory elements to create calming, comfortable spaces tailored to their individual preferences.</p>
+                <p>The research investigates how VR can provide autistic individuals with a portable, accessible solution for sensory regulation, while the co-design approach ensures the technology genuinely meets user needs.</p>
+            </section>
+
+            <!-- Image Gallery -->
+            <section class="project-gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="0">
+                        <img src="images/sensory-overview.png" alt="Overview of the VR sensory environment landscape" class="gallery-image">
+                    </div>
+                    <div class="gallery-item" data-index="1">
+                        <img src="images/sensory-forest.png" alt="Forest path environment in the VR sensory room" class="gallery-image">
+                    </div>
+                    <div class="gallery-item" data-index="2">
+                        <img src="images/sensory-options.png" alt="Environment customisation settings menu" class="gallery-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features -->
+            <section class="project-details">
+                <h2>Key Features</h2>
+                <p>The VR sensory room includes extensive customisation options developed through iterative co-design sessions with autistic adults:</p>
+                <ul class="feature-list">
+                    <li><strong>Lighting Settings</strong> — Adjustable brightness, colour temperature, and ambient lighting</li>
+                    <li><strong>Room Colours</strong> — Customisable colour schemes to suit individual preferences</li>
+                    <li><strong>Room Features</strong> — Toggleable environmental elements and objects</li>
+                    <li><strong>Passthrough Settings</strong> — Mixed reality options for grounding</li>
+                    <li><strong>Outside Settings</strong> — Natural environments including forests and water features</li>
+                </ul>
+            </section>
+
+            <!-- Technical Details -->
+            <section class="project-details">
+                <h2>Technical Details</h2>
+                <p>Built in Unity using C#, the prototype was developed for PCVR platforms to leverage high-fidelity graphics during the co-design research phase. The environment features procedurally generated natural landscapes, dynamic lighting systems, and an intuitive menu system for real-time customisation.</p>
+            </section>
+
+            <!-- Related Publication -->
+            <section class="project-details">
+                <h2>Related Publication</h2>
+                <p>This project informed the research published in <a href="papers.html#sensory-preferences">Insights into Sensory and Relaxation Preferences to Inform the Design of Calming Spaces and Sensory Rooms for Autistic Adults</a> (Autism in Adulthood, 2025).</p>
+            </section>
+
+            <!-- Project Navigation -->
+            <nav class="project-nav">
+                <a href="projects.html" class="nav-prev">
+                    <span class="nav-label">All Projects</span>
+                </a>
+                <a href="project-standalone-sensory.html" class="nav-next">
+                    <span class="nav-label">Next Project</span>
+                    <span class="nav-title">Standalone Sensory Room →</span>
+                </a>
+            </nav>
+        </article>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">×</button>
+        <button class="lightbox-prev" aria-label="Previous image">‹</button>
+        <button class="lightbox-next" aria-label="Next image">›</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image-container">
+            </div>
+            <div class="lightbox-counter">
+                <span class="current">1</span> / <span class="total">3</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="lightbox.js"></script>
+</body>
+</html>

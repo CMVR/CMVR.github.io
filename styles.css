@@ -195,6 +195,7 @@ img {
 
 .hero-card {
     flex-shrink: 0;
+    max-width: fit-content;
     background: var(--color-sidebar);
     border: 1px solid var(--color-border);
     border-radius: 16px;
@@ -207,6 +208,8 @@ img {
 .hero-card img {
     width: 180px;
     height: 180px;
+    max-width: 180px;
+    min-width: 180px;
     object-fit: cover;
     object-position: top;
     border-radius: 50%;
@@ -526,6 +529,8 @@ img {
     .hero-card img {
         width: 140px;
         height: 140px;
+        max-width: 140px;
+        min-width: 140px;
     }
 
     .hero-card {

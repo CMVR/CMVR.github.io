@@ -409,6 +409,18 @@ img {
     transition: all var(--transition-smooth);
 }
 
+.project-card-large:nth-child(1) {
+    background: #eef5fa;
+}
+
+.project-card-large:nth-child(2) {
+    background: #f0f4e8;
+}
+
+.project-card-large:nth-child(3) {
+    background: #f3eef7;
+}
+
 .project-card-large:hover {
     transform: translateY(-2px);
     box-shadow: 0 15px 35px var(--color-shadow);

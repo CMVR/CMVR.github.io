@@ -149,6 +149,7 @@ img {
    ================================ */
 .content {
     margin-left: var(--sidebar-width);
+    max-width: calc(var(--content-max-width) + var(--sidebar-width));
     min-height: 100vh;
     padding: var(--spacing-xl) var(--spacing-lg);
 }

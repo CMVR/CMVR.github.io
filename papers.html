@@ -18,6 +18,7 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
+            <li><a href="phd.html">PhD</a></li>
             <li><a href="hobby.html">Hobby Projects</a></li>
             <li><a href="papers.html" class="active">Papers</a></li>
             <li><a href="about.html">About</a></li>
@@ -30,37 +31,97 @@
             <p class="page-intro">Peer-reviewed research exploring virtual reality applications for neurodiversity and professional training.</p>
         </header>
 
-        <section class="papers-list">
-            <article class="paper-item" id="sensory-preferences">
-                <div class="paper-year">2025</div>
-                <div class="paper-content">
-                    <h2>Insights into Sensory and Relaxation Preferences to Inform the Design of Calming Spaces and Sensory Rooms for Autistic Adults</h2>
-                    <p class="paper-authors">C McCabe, N Newbutt, A Hutchinson, T Loetscher</p>
-                    <p class="paper-journal">Autism in Adulthood</p>
-                    <div class="paper-links">
-                        <a href="https://scholar.google.com.au/citations?view_op=view_citation&hl=en&user=eULPghAAAAAJ&citation_for_view=eULPghAAAAAJ:2osOgNQ5qMEC" target="_blank" class="paper-link">View Paper →</a>
-                        <span class="paper-citations">Cited by 5</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="paper-item">
-                <div class="paper-year">2024</div>
-                <div class="paper-content">
-                    <h2>Bridging the Gap: Virtual Reality as a Tool for De-escalation Training in Disability Support Settings</h2>
-                    <p class="paper-authors">R Hsu, C McCabe, C Ellison, M Howells, T Loetscher</p>
-                    <p class="paper-journal">Multimodal Technologies and Interaction 8 (11), 100</p>
-                    <div class="paper-links">
-                        <a href="https://scholar.google.com.au/citations?view_op=view_citation&hl=en&user=eULPghAAAAAJ&citation_for_view=eULPghAAAAAJ:qjMakFHDy7sC" target="_blank" class="paper-link">View Paper →</a>
-                        <span class="paper-citations">Cited by 2</span>
-                    </div>
-                </div>
-            </article>
+        <section class="papers-list" id="papers-list">
+            <div id="papers-loading" style="text-align: center; padding: 3rem 0; color: var(--color-text-light);">
+                Loading publications...
+            </div>
         </section>
 
         <section class="scholar-link">
             <p>For a complete list of publications, visit my <a href="https://scholar.google.com.au/citations?user=eULPghAAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</p>
         </section>
     </main>
+
+    <script>
+        const ORCID_ID = '0000-0002-5726-3245';
+        const API_BASE = `https://pub.orcid.org/v3.0/${ORCID_ID}`;
+
+        async function fetchPublications() {
+            const container = document.getElementById('papers-list');
+            const loading = document.getElementById('papers-loading');
+
+            try {
+                const worksRes = await fetch(`${API_BASE}/works`, {
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (!worksRes.ok) throw new Error('Failed to fetch publications');
+                const worksData = await worksRes.json();
+
+                const putCodes = worksData.group.map(g => g['work-summary'][0]['put-code']);
+
+                const workDetails = await Promise.all(
+                    putCodes.map(code =>
+                        fetch(`${API_BASE}/work/${code}`, {
+                            headers: { 'Accept': 'application/json' }
+                        }).then(r => r.json())
+                    )
+                );
+
+                workDetails.sort((a, b) => {
+                    const yearA = a['publication-date']?.year?.value || '0';
+                    const yearB = b['publication-date']?.year?.value || '0';
+                    return yearB.localeCompare(yearA);
+                });
+
+                loading.remove();
+
+                workDetails.forEach(work => {
+                    const title = work.title?.title?.value || 'Untitled';
+                    const year = work['publication-date']?.year?.value || '';
+                    const journal = work['journal-title']?.value || '';
+
+                    const authors = (work.contributors?.contributor || [])
+                        .filter(c => c['credit-name']?.value)
+                        .map(c => c['credit-name'].value)
+                        .join(', ');
+
+                    let paperUrl = '';
+                    const externalIds = work['external-ids']?.['external-id'] || [];
+                    const doi = externalIds.find(id => id['external-id-type'] === 'doi');
+                    if (doi) {
+                        paperUrl = doi['external-id-url']?.value || `https://doi.org/${doi['external-id-value']}`;
+                    } else {
+                        const other = externalIds.find(id => id['external-id-url']?.value);
+                        if (other) paperUrl = other['external-id-url'].value;
+                    }
+
+                    const article = document.createElement('article');
+                    article.className = 'paper-item';
+
+                    let linksHtml = '';
+                    if (paperUrl) {
+                        linksHtml = `<a href="${paperUrl}" target="_blank" class="paper-link">View Paper →</a>`;
+                    }
+
+                    article.innerHTML = `
+                        <div class="paper-year">${year}</div>
+                        <div class="paper-content">
+                            <h2>${title}</h2>
+                            ${authors ? `<p class="paper-authors">${authors}</p>` : ''}
+                            ${journal ? `<p class="paper-journal">${journal}</p>` : ''}
+                            ${linksHtml ? `<div class="paper-links">${linksHtml}</div>` : ''}
+                        </div>
+                    `;
+                    container.appendChild(article);
+                });
+
+            } catch (err) {
+                loading.textContent = 'Unable to load publications. Please try again later.';
+                console.error('ORCID fetch error:', err);
+            }
+        }
+
+        fetchPublications();
+    </script>
 </body>
 </html>

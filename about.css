@@ -39,22 +39,16 @@
     margin-bottom: 0.5rem;
 }
 
-.about-intro .role {
-    font-size: 1.1rem;
-    color: var(--color-accent);
-    font-weight: 500;
-    margin-bottom: 0.25rem;
-}
-
-.about-intro .affiliation {
-    font-size: 0.95rem;
+.about-intro-text {
+    font-size: 1.05rem;
     color: var(--color-text-light);
-    line-height: 1.5;
+    line-height: 1.8;
+    margin-top: 0.5rem;
 }
 
 /* About Content */
 .about-content {
-    max-width: 800px;
+    max-width: 65ch;
 }
 
 .about-section {

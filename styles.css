@@ -15,7 +15,7 @@
     --color-shadow: rgba(45, 52, 54, 0.06);
     
     /* Typography */
-    --font-display: 'Fraunces', Georgia, serif;
+    --font-display: 'Inter', -apple-system, sans-serif;
     --font-body: 'DM Sans', -apple-system, sans-serif;
     
     /* Spacing */
